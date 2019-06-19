@@ -94,3 +94,39 @@ footer {
     padding: 10px 0 10px 10px;
     background-color: #cdcdcd;
 }
+
+
+.search-bar {
+  padding: 10px 0;
+}
+
+.search-bar form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 10px;
+}
+
+.search-bar button {
+  padding: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.result {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.result h2 {
+  margin-bottom: 5px;
+}
+
+.result-movie {
+  background: aqua;
+}
+
+.result-person {
+  background: purple;
+}

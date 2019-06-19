@@ -1,4 +1,4 @@
-
+<?php include 'private/includes/header.php'; ?>
     <section class="content">
         <h1>Zeldzame planten</h1>
         <p>Hieronder de 10 laatste door mij gevonden zeldzame plantjes.</p>
@@ -18,3 +18,4 @@
 		<?php endforeach; ?>
 
     </section>
+<?php include 'private/includes/footer.php'; ?>
