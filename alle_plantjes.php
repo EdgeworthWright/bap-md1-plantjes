@@ -1,11 +1,3 @@
-<?php
-require 'private/functions.php';
-require 'private/model.php';
-$conn = dbConnect();
-$result = get_all_plants('ORDER BY plant_name');
-
-include 'private/includes/header.php';
-?>
 
     <section class="content">
         <h1>Alle plantjes</h1>
@@ -24,5 +16,3 @@ include 'private/includes/header.php';
 		<?php endforeach; ?>
 
     </section>
-
-<?php include 'private/includes/footer.php'; ?>

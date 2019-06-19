@@ -11,7 +11,7 @@
 <div class="wrapper">
     <nav>
         <ul>
-            <li><a href="homepage.php">Home</a></li>
-            <li><a href="alle_plantjes.php">Alle plantjes</a></li>
+            <li><a href="?page=homepage">Home</a></li>
+            <li><a href="?page=alle-plantjes">Alle plantjes</a></li>
         </ul>
     </nav>

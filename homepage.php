@@ -1,11 +1,4 @@
-<?php
-require 'private/functions.php';
-require 'private/model.php';
-$conn = dbConnect();
-$result = get_latest_plants('ORDER BY discovery_date DESC');
 
-include 'private/includes/header.php';
-?>
     <section class="content">
         <h1>Zeldzame planten</h1>
         <p>Hieronder de 10 laatste door mij gevonden zeldzame plantjes.</p>
@@ -25,4 +18,3 @@ include 'private/includes/header.php';
 		<?php endforeach; ?>
 
     </section>
-<?php include 'private/includes/footer.php'; ?>
