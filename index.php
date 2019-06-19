@@ -1,7 +1,7 @@
 <?php
-require 'functions.php';
-require 'model.php';
-require 'controllers.php';
+require 'private/functions.php';
+require 'private/model.php';
+require 'private/controllers.php';
 
 
 /**

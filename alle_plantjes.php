@@ -1,6 +1,8 @@
 <?php
 require 'private/functions.php';
+require 'private/model.php';
 $conn = dbConnect();
+$result = get_all_plants('ORDER BY plant_name');
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,9 +26,7 @@ $conn = dbConnect();
         <p>Hieronder zie je alle plantjes die ooit zijn ontdekt door mij.</p>
 
 		<?php
-		$query     = 'SELECT * FROM `plants` ORDER BY `plant_name`';
-		$statement = $conn->query( $query );
-		foreach ( $statement as $plantje ):?>
+		foreach ( $result as $plantje ):?>
             <div class="plantje">
                 <h2><?php echo $plantje['plant_name'] ?> <em><?php echo $plantje['plant_scientific_name'] ?></em></h2>
                 <img src="https://images-na.ssl-images-amazon.com/images/I/51TxgNsEnaL.jpg" width="90" height="90"/>
