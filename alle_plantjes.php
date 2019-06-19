@@ -1,12 +1,6 @@
 <?php
-try {
-	$pdo = new PDO( 'mysql:host=localhost;dbname=bap-plantjes', 'root', 'root' );
-	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-	$pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC );
-} catch ( PDOException $e ) {
-	echo $e->getFile().' on line ' . $e->getLine() . ': ' . $e->getMessage();
-	exit();
-}
+require 'private/functions.php';
+$conn = dbConnect();
 ?>
 <!doctype html>
 <html lang="en">
@@ -31,7 +25,7 @@ try {
 
 		<?php
 		$query     = 'SELECT * FROM `plants` ORDER BY `plant_name`';
-		$statement = $pdo->query( $query );
+		$statement = $conn->query( $query );
 		foreach ( $statement as $plantje ):?>
             <div class="plantje">
                 <h2><?php echo $plantje['plant_name'] ?> <em><?php echo $plantje['plant_scientific_name'] ?></em></h2>
